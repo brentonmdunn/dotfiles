@@ -1,0 +1,8 @@
+alias ll='ls -alFG'
+alias cls='clear'
+alias g='git'
+alias gst='git status'
+alias gcb='git checkout -b'
+alias gpl='git pull'
+alias gps='git push'
+alias gcm='git commit -m'
