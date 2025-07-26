@@ -32,3 +32,6 @@ function mkcd() {
     return 1 # Exit with an error status
   fi
 }
+
+# Prompt before user types 
+PROMPT="%F{blue}%B%~%b%f %F{green}>%f "
