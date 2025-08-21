@@ -7,6 +7,7 @@ alias gcb='git checkout -b'
 alias gpl='git pull'
 alias gps='git push'
 alias gcm='git commit -m'
+alias gc='git clone'
 
 # Automatically cd's into a directory if just type directory name omitting the cd
 # If command is the same name as directory, command takes preference
