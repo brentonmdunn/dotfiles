@@ -37,5 +37,12 @@ function mkcd() {
   fi
 }
 
+# gccd: Clones repository and immediately changes into it
+# Usage: gccd <repo>
+function gccd() {
+    git clone "$1" || return
+    cd "$(basename "$1" .git)"
+}
+
 # Prompt before user types 
 PROMPT="%F{blue}%B%~%b%f %F{green}>%f "
