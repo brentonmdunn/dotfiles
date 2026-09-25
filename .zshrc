@@ -44,5 +44,21 @@ function gccd() {
     cd "$(basename "$1" .git)"
 }
 
+# syncupstream: Syncs forked repo with  upstream repo
+function syncupstream() {
+    git fetch upstream
+    git checkout main
+    git merge --ff-only upstream/main
+    git push origin main
+}
+
+function git-clean-merged() {
+  git fetch --prune
+  git branch --merged origin/main | grep -v -E "^\*|main" | xargs -r git branch -d
+}
+alias gclean='git-clean-merged'
+
+
+
 # Prompt before user types 
 PROMPT="%F{blue}%B%~%b%f %F{green}>%f "
